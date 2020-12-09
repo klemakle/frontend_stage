@@ -44,7 +44,7 @@ function EntrepriseClasseGenie(props){
     
     return(
         <div className="btn-group" style={{width: "100%"}} >
-            <h5 className="btn-lg  btn-block btn-outline-secondary  dropdown-toggle"  data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="True">{props.genie}</h5>
+            <h5 className="btn-lg  btn-block btn-dark  dropdown-toggle mb-4"  data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="True">{props.genie}</h5>
         <div className="dropdown-menu" style={{width: "100%"}}>
         <CDataTable
             className="dropdown-item"
@@ -62,13 +62,10 @@ function EntrepriseClasseGenie(props){
                                 {item.partenaire == true ? 'OUI' : 'NON'}
                             </CBadge>
                         </td>
-                    );
-                }
+                    );}
             }}
         />
         </div>
-       
-    
         </div>
     )
 

@@ -10,7 +10,7 @@ import Box from "@material-ui/core/Box";
 
 import AllEntreprises from './allEntreprise';
 
-import ClasseEntreprise from './classeEntreprise';
+// import ClasseEntreprise from './classeEntreprise';
 
 import EntrepriseClasseGenie from './entGenieClasse';
 
@@ -79,7 +79,7 @@ export default function NavTabs() {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{marginBottom : '2em', borderBottom : '0.1px solid grey' }}>
       <AppBar position="static">
         <Tabs
           variant="fullWidth"
@@ -109,7 +109,7 @@ export default function NavTabs() {
 
 
       <TabPanel value={value} index={2}>
-        <EntrepriseClasseGenie className='mb-3' classe ='DIC1' genie='Génie Civil'/>
+        <EntrepriseClasseGenie classe ='DIC1' genie='Génie Civil'/>
         <EntrepriseClasseGenie classe ='DIC1' genie='Electro-Mecanique'/>
         <EntrepriseClasseGenie classe ='DIC1' genie='Informatique et Télécommunications'/>
         <EntrepriseClasseGenie classe ='DIC1' genie='Aéronautique'/>

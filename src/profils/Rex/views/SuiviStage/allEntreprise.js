@@ -48,9 +48,13 @@ function Test(){
         <CDataTable
             items={entreprises}
             fields={fields}
-            itemsPerPage={10}
+            itemsPerPage={7}
             hover
             pagination
+            onRowClick = { (item) =>{
+                console.log(item.slug)
+                }
+            }
             scopedSlots = {{
                 'partenaire':
                 (item)=>(

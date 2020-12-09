@@ -7,13 +7,14 @@ import {
     CCardHeader,
     CCol,
     CRow,
-    CBadge
+    CBadge,
+    CCollapse
   } from '@coreui/react'
-
 
 
 import Menu from  './menuClasse'
 
+import Colapse from './colapse';
 
 
 function Entreprise() {
@@ -22,8 +23,11 @@ function Entreprise() {
             <CCardBody>
                 <CRow>
                     <CCol sm="12">
-                    <h1> Liste des entreprises offrant des stages </h1>
+                    <h1> </h1>
                         <Menu/>
+                        <div>
+                            <Colapse/>
+                        </div>
                         
                     </CCol>
                 </CRow>

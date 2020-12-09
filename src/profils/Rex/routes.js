@@ -6,6 +6,7 @@ const routes = [
     { path: '/rex', exact: true, name: 'rex'},
     { path: '/rex/Dashboard', name: 'Dashboard', component: Dashboard },
     { path: '/rex/entreprises', name: 'Entreprises', component: Autre },
+    { path: '/rex/entreprises/single', name: 'Entreprise_single', component: Autre },
 ]    
 
 export default routes;
