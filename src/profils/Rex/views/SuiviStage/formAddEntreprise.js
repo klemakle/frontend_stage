@@ -41,9 +41,9 @@ function AddEntreprise(){
 
     const [donnees, setDonnees] = useState({})
 
-    const onSubmit =   (data) =>{
+    const onSubmit = (data) => {
         setDonnees(data) ;
-        console.log(donnees);
+        // console.log(donnees);
         cancelCourse();
     }
 
@@ -98,7 +98,7 @@ function AddEntreprise(){
             <CCol sm="12">
                 <CRow>
             
-            <CCol sm="10" style={{maxWidth:"70%"}}>
+            <CCol xs="10" style={{maxWidth:"70%"}}>
               <CForm method="POST"  id="create-entreprise-form" encType="application/json" onSubmit={handleSubmit(onSubmit)}>
             <CRow>
               <CCol sm="4">
@@ -157,10 +157,12 @@ function AddEntreprise(){
                     id="lien_page"
                     name="lien_page"
                     placeholder="https://example.com"
+                    pattern="https://\w*\.{1}\w{1,3}"
+                    defaultValue="https://"
                     autoComplete="url"
-                    innerRef={register({required: "Lien du site de l'entreprise ?"})}
+                    innerRef={register({required: "format : https://example.com"})}
                   />
-                  {errors.lien_page && <span className="help-block" style={{color:'red'}} >{errors.lien_page.message}</span> }
+                  <span className="help-block" style={{color:'red'}} >format : https://example.com</span> 
                 </CFormGroup>
                 </CCol>
                 </CRow>
@@ -183,11 +185,11 @@ function AddEntreprise(){
                   </CSelect>
                 </CFormGroup>
                 </CCol>
-                <CCol sm="4">
+                <CCol xs="4">
                 <CFormGroup>
                   <CLabel htmlFor="partenaire" >Est partenaire ?</CLabel> <br></br>
-                    <div className="ml-4"><CInputRadio  id="partenaire" name="partenaire" value = "true" /> OUI </div><br></br>
-                    <div className="ml-4"><CInputRadio  id="partenaire" name="partenaire" value = "false" checked/>  NON</div>
+                    <div className="ml-4"><CInputRadio  id="partenaire-true" name="partenaire" value = "true" /> OUI </div><br></br>
+                    <div className="ml-4"><CInputRadio  id="partenaire-false" name="partenaire" value = "false" checked/>  NON</div>
                 </CFormGroup>
                 </CCol>
                 </CRow>
@@ -217,7 +219,7 @@ function AddEntreprise(){
                 </CRow>
               </CForm>
               </CCol>
-              <CCol sm="2" style={{maxWidth:"30%"}}>
+              <CCol xs="2" style={{maxWidth:"30%"}}>
                   <div>
                     {isSubmitSuccessful && <Succes/> }
                   </div>

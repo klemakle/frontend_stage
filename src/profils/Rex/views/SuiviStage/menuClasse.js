@@ -10,7 +10,6 @@ import Box from "@material-ui/core/Box";
 
 import AllEntreprises from './allEntreprise';
 
-// import ClasseEntreprise from './classeEntreprise';
 
 import EntrepriseClasseGenie from './entGenieClasse';
 
@@ -79,7 +78,7 @@ export default function NavTabs() {
   };
 
   return (
-    <div className={classes.root} style={{marginBottom : '2em', borderBottom : '0.1px solid grey' }}>
+    <div className={classes.root} style={{marginBottom : '2em', borderBottom : '0.1px solid red' }}>
       <AppBar position="static">
         <Tabs
           variant="fullWidth"

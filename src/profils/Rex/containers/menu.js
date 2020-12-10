@@ -16,7 +16,7 @@ export default [
     
     {
       _tag: 'CSidebarNavItem',
-      name: 'Entreprises',
+      name: 'Entreprise',
       to: '/rex/entreprises',
       icon: 'cil-pencil',
     },
